@@ -6,7 +6,7 @@ My personal theme for [shaoner/resumy](https://github.com/shaoner/resumy). See e
 
 - Multilingual: English, German, Czech included (see [below](#change-template-language) for more info)
 
-Currently, this theme renders/supports the following resume sections:
+Currently, this theme renders/supports the following resume sections of [JSON Schema](https://jsonresume.org/schema/):
 | Section		| Supported?	| Unsupported details			|
 |---------------|:-------------:|-------------------------------|
 | Basics		| &#9989;		| `.image`, `.url`, `.summary`	|
