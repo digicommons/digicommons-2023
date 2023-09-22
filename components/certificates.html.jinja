@@ -1,0 +1,19 @@
+<section class="certificates">
+	<h3>{{ i18n.certificates.title }}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{{ i18n.certificates.date }}</th>
+				<th scope="col">{{ i18n.certificates.certificate }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for certificate in certificates %}
+			<tr>
+				<th scope="row">{{ format_date(certificate.date) }}</th>
+				<td><a href="{{ certificate.url }}">{{ certificate.name }}</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</section>

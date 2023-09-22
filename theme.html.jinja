@@ -1,0 +1,51 @@
+{% from "i18n/EN.jinja" import i18n %}
+
+{%- macro format_date(date) -%}
+{{ strptime(date, '%Y-%m-%d').strftime('%-m/%Y')}}
+{%- endmacro -%}
+
+{%- macro format_date_range(exp) -%}
+{{ format_date(exp.startDate) }} – {% if exp.endDate %}{{ format_date(exp.endDate) }}{% else %}{{ i18n.today }}{% endif %}
+{%- endmacro -%}
+
+<body>
+	<header>
+		{% include "components/aside.html.jinja" %}
+		<div class="top_headings">
+			<h1>{{ i18n.title }}</h1>
+			<h2>{{ basics.name }}</h2>
+		</div>
+	</header>
+	
+	<main>
+		{% if work %}
+		{% include "components/work.html.jinja" %}
+		{% endif %}
+	
+		{% if education %}
+		{% include "components/education.html.jinja" %}
+		{% endif %}
+	
+		{% if certificates %}
+		{% include "components/certificates.html.jinja" %}
+		{% endif %}
+	
+		{% if languages %}
+		{% include "components/languages.html.jinja" %}
+		{% endif %}
+	
+		{% if skills %}
+		{% include "components/skills.html.jinja" %}
+		{% endif %}
+	</main>
+	
+	<footer>
+		<ul>
+			{% for profile in basics.profiles %}
+			{% if profile.network|lower == "LinkedIn"|lower or profile.network|lower == "XING"|lower %}
+			<li>{{ profile.network }}: <a href="{{ profile.url }}">{{ profile.url | replace("https://www.", "") }}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</footer>
+</body>

@@ -1,0 +1,31 @@
+<section class="work">
+	<h3>{{ i18n.work.title }}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{{ i18n.work.range }}</th>
+				<th scope="col">{{ i18n.work.description }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for job in work %}
+			<tr>
+				<th scope="row">{{ format_date_range(job) }}</th>
+				<td>
+					<h4>{{ job.position }}</h4>
+					<h5>
+						{% if job.url %}
+						<a href="{{ job.url }}">{{ job.name }}</a>
+						{% else %}
+						{{ job.name }}
+						{% endif %}
+					</h5>
+					{% for paragraph in job.highlights %}
+					<p>{{ paragraph }}</p>
+					{% endfor %}
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</section>

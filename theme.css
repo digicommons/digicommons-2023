@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+}
+*, * *::before, * *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.15;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 2.54cm 1.9cm 1.3cm 1.9cm;
+}
+@page :first {
+  margin: 1.34cm 1.9cm 1.3cm 1.9cm;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("fonts/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans Italic";
+  src: url("fonts/FiraSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url("fonts/FiraSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "Fira Sans";
+  font-size: 12pt;
+  color: #333333;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fira Sans Bold";
+}
+
+h1, h2 {
+  font-size: 14pt;
+}
+
+h3, h4, h5 {
+  font-size: 12pt;
+}
+
+h2, h3 {
+  color: #5F5F5F;
+}
+
+h5 {
+  font-family: "Fira Sans Italic";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header aside,
+footer {
+  font-size: 11pt;
+}
+
+/*
+ * Layout
+ */
+body {
+  /*
+  * Tables
+  */
+}
+body .top_headings {
+  padding-left: 4cm;
+  padding-top: 1.46cm;
+  padding-bottom: 1.2cm;
+}
+body section {
+  padding-bottom: 0.8cm;
+}
+body h3 {
+  padding-bottom: 0.1cm;
+  border-bottom: 1px solid #222;
+}
+body h3, body h5, body p {
+  margin-bottom: 0.3cm;
+}
+body aside {
+  text-align: right;
+}
+body aside ul {
+  list-style-type: none;
+}
+body aside li.address {
+  padding-bottom: 0.2cm;
+}
+body footer {
+  position: absolute;
+  bottom: 0cm;
+  width: 100%;
+}
+body footer ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer ul li {
+  list-style-type: none;
+}
+body footer a {
+  color: #1A0DAB;
+}
+body .work p {
+  padding-left: 1.4cm;
+}
+body .education h4 {
+  font-family: "Fira Sans";
+  margin-bottom: 0.3cm;
+}
+body .education h5 {
+  font-family: "Fira Sans Bold";
+}
+body .education h5, body .education p {
+  display: inline;
+}
+body .education div.details {
+  margin-bottom: 0.3cm;
+}
+body .skills div.details {
+  margin-bottom: 0.1cm;
+}
+body thead {
+  display: none;
+}
+body tr {
+  vertical-align: top;
+  break-inside: avoid;
+}
+body section .work tbody th, body section .education tbody th, body section .certificates tbody th {
+  width: 3.5cm;
+  padding-right: 0.8cm;
+}
+body section .languages tbody th, body section .skills tbody th {
+  width: 5cm;
+  padding-right: 0.4cm;
+}

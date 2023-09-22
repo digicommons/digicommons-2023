@@ -1,0 +1,19 @@
+<section class="languages">
+	<h3>{{ i18n.languages.title }}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{{ i18n.languages.language }}</th>
+				<th scope="col">{{ i18n.languages.level }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for language in languages %}
+			<tr>
+				<th scope="row">{{ language.language }}</th>
+				<td>{{ language.fluency }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</section>

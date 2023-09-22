@@ -1,0 +1,25 @@
+<section class="education">
+	<h3>{{ i18n.education.title }}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{{ i18n.education.range }}</th>
+				<th scope="col">{{ i18n.education.description }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for experience in education %}
+			<tr>
+				<th scope="row">{{ format_date_range(experience) }}</th>
+				<td>
+					<h4>{{ experience.institution }}:</h4>
+					<div class="details">
+						<h5>{{ experience.studyType }}</h5>
+						<p>{{ experience.area }}</p>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</section>

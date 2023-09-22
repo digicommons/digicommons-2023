@@ -1,0 +1,116 @@
+/*
+ * Layout
+ */
+
+ body {
+  .top_headings {
+    padding-left: 4cm;
+    padding-top: 1.46cm;
+    padding-bottom: 1.2cm;
+  }
+
+  section {
+    padding-bottom: 0.8cm;
+  }
+
+  h3 {
+    padding-bottom: 0.1cm;
+    border-bottom: 1px solid #222;
+  }
+
+  h3, h5, p {
+    margin-bottom: 0.3cm;
+  }
+
+  aside {
+    text-align: right;
+
+    ul {
+      list-style-type: none;
+    }
+
+    li.address {
+      padding-bottom: 0.2cm;
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0cm;
+    width: 100%;
+
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    a {
+      color: #1A0DAB;
+    }
+  }
+
+  .work {
+    p {
+      padding-left: 1.4cm;
+    }
+  }
+
+  .education {
+    h4 {
+      font-family: 'Fira Sans';
+      margin-bottom: 0.3cm;
+    }
+
+    h5 {
+      font-family: 'Fira Sans Bold';
+    }
+
+    h5, p {
+      display: inline;
+    }
+
+    div.details {
+      margin-bottom: 0.3cm;
+    }
+  }
+
+  .skills {
+    div.details {
+      margin-bottom: 0.1cm;
+    }
+  }
+
+  /*
+  * Tables
+  */
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    vertical-align: top;
+    break-inside: avoid;
+  }
+
+  section {
+    .work, .education, .certificates {
+      tbody th {
+        width: 3.5cm;
+        padding-right: 0.8cm;
+      }
+    }
+
+    .languages, .skills {
+      tbody th {
+        width: 5cm;
+        padding-right: 0.4cm;
+      }
+    }
+  }
+}

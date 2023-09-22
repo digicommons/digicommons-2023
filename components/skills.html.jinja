@@ -1,0 +1,25 @@
+<section class="skills">
+	<h3>{{ i18n.skills.title }}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{{ i18n.skills.category }}</th>
+				<th scope="col">{{ i18n.skills.skill_list }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for skill in skills %}
+			<tr>
+				<th scope="row">{{ skill.name }}:</th>
+				<td>
+					<div class="details">
+					{% for keyword in skill.keywords %}
+					{{ keyword }}{{ "" if loop.last else ", " }}
+					{% endfor %}
+					</div>
+        </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</section>
